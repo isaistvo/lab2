@@ -4,8 +4,8 @@ WORKDIR /app
 
 RUN apk add --no-cache nasm build-base
 
-COPY lab3.asm .
+COPY lab3.s .
 
-RUN nasm -f elf64 -o lab3.o lab3.asm && ld -o lab3 lab3.o
+RUN nasm -f elf64 -o lab3.o lab3.s && ld -o lab3 lab3.o
 
 CMD ["./lab3"]
