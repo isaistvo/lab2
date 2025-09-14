@@ -6,7 +6,7 @@ _start:
     mov rax, 1          ; System call number for write
     mov rdi, 1          ; File descriptor (1 = stdout)
     mov rsi, message    ; Address of the message
-    mov rdx, 12         ; Length of the message
+    mov rdx, 13         ; Length of the message
     syscall             ; Execute the system call
 
     ; System call 'exit'
